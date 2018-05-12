@@ -8,17 +8,17 @@
 
 import UIKit
 
-enum TransitionType {
+public enum TransitionType {
     case shutter // default
     case fadeOnly
 }
 
-enum LineOrientation {
+public enum LineOrientation {
     case vertical
     case horizontal
 }
 
-class SplashScreenView: UIView {
+public class SplashScreenView: UIView {
     
     private var imageView: UIImageView!
 
@@ -36,13 +36,14 @@ class SplashScreenView: UIView {
         shouldDrawLines = false
     }
     
-    convenience init(frame: CGRect, logoColor: UIColor, logoSize: CGSize, logoName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
+    public convenience init(frame: CGRect, logoColor: UIColor, logoSize: CGSize, logoName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
         self.init(frame: frame)
         
         /* Set Default Values for required vars */
         lineCount = 10
         shouldAnimateLogo = true
         
+
         backgroundColor = logoColor
         
         let x = bounds.midX - (0.5 * logoSize.width)
@@ -59,23 +60,19 @@ class SplashScreenView: UIView {
         }
     }
     
-    convenience init(frame: CGRect, imageName: String) {
+    public convenience init(frame: CGRect, imageName: String) {
         self.init(frame: frame, logoColor: UIColor.black, logoSize: CGSize(width: 200, height: 200), logoName: imageName)
         
     }
     
-    convenience init(frame: CGRect, lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
+    public convenience init(frame: CGRect, lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
         self.init(frame: frame)
         self.lineCount = lineCount
         backgroundColor = UIColor.black
         animateLines(lineOrientation: lineOrientation)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func animateLines(lineOrientation: LineOrientation) {
+    private func animateLines(lineOrientation: LineOrientation) {
         
         var lineHeight: CGFloat = 0
         var lineWidth: CGFloat = 0
@@ -151,5 +148,9 @@ class SplashScreenView: UIView {
         
         imageView.frame = CGRect(x: x, y: y, width: size.width, height: size.height)
         self.imageView = imageView
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }
