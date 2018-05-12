@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49B821B520A75F4A006E9A44 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B821B420A75F4A006E9A44 /* SplashScreenView.swift */; };
 		4D10B0A0EC59BC2B5F43810823CF1738 /* Pods-ATSplashScreen_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ECFAC161BF272AB5D6DDEC64C78B88 /* Pods-ATSplashScreen_Tests-dummy.m */; };
 		57EE661EB892BB725BEDD86F821FA533 /* ATSplashScreen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58378D7DEB237D03F2998B0CF2627313 /* ATSplashScreen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A1EB4C7EB7C71B5F7A187562491A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		722EA9356342EC8499B2F120AD97AB43 /* Pods-ATSplashScreen_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B794DFDCAD1FEAFDB57DEE61863E4F5 /* Pods-ATSplashScreen_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AB68A800BFB6BD868D81E5CD1BC61EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8AADFB87E2DB5AD9EF7C2703EE910802 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3A1099DE238798CC12CCCF4DF1BC4 /* ReplaceMe.swift */; };
 		A8DFA6BBA7E5B64AE1C1CE3D32B694D0 /* ATSplashScreen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C738A405E6ACF2EF3A38E8A6D60B751 /* ATSplashScreen-dummy.m */; };
 		AEFDDC81081D41961AC4C021A48C0456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		BC5132BFD67B1BC67CEB572F7E32CEC9 /* Pods-ATSplashScreen_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A742F6A2C0EEFBDC7551D6DF342AF15 /* Pods-ATSplashScreen_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,28 +40,28 @@
 		42ECFAC161BF272AB5D6DDEC64C78B88 /* Pods-ATSplashScreen_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATSplashScreen_Tests-dummy.m"; sourceTree = "<group>"; };
 		460D094DDFD59A80F5A4A44E12FDCCA9 /* Pods-ATSplashScreen_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATSplashScreen_Tests-resources.sh"; sourceTree = "<group>"; };
 		47E99FFBC20F7F51D917480A1AACBC29 /* Pods-ATSplashScreen_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATSplashScreen_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		49B821B420A75F4A006E9A44 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4B794DFDCAD1FEAFDB57DEE61863E4F5 /* Pods-ATSplashScreen_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATSplashScreen_Tests-umbrella.h"; sourceTree = "<group>"; };
-		4F2785A08D87BDF941518DB257A0354B /* Pods_ATSplashScreen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ATSplashScreen_Example.framework; path = "Pods-ATSplashScreen_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2785A08D87BDF941518DB257A0354B /* Pods_ATSplashScreen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATSplashScreen_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56872DBCC0FCD3D7B38EAF75F16A1CD1 /* Pods-ATSplashScreen_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATSplashScreen_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58378D7DEB237D03F2998B0CF2627313 /* ATSplashScreen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATSplashScreen-umbrella.h"; sourceTree = "<group>"; };
-		5D27C0923A9F6867B8EFA8578269FC83 /* Pods-ATSplashScreen_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ATSplashScreen_Tests.modulemap"; sourceTree = "<group>"; };
-		65D3A1099DE238798CC12CCCF4DF1BC4 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = ATSplashScreen/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		5D27C0923A9F6867B8EFA8578269FC83 /* Pods-ATSplashScreen_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ATSplashScreen_Tests.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		71CDB73EA7CB42DB1460972065D45873 /* Pods-ATSplashScreen_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATSplashScreen_Example-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95D1678F94601F92C4895549A4063424 /* Pods_ATSplashScreen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ATSplashScreen_Tests.framework; path = "Pods-ATSplashScreen_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95D1678F94601F92C4895549A4063424 /* Pods_ATSplashScreen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATSplashScreen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A742F6A2C0EEFBDC7551D6DF342AF15 /* Pods-ATSplashScreen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATSplashScreen_Example-umbrella.h"; sourceTree = "<group>"; };
 		A1831F5BF2291BBE1E78C6DE39755EB6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A77E2768F4C746EFBCB6BC4B94F47E50 /* Pods-ATSplashScreen_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATSplashScreen_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AB2E467CEF46AEC96924658F027DA2E0 /* ATSplashScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ATSplashScreen.framework; path = ATSplashScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2E467CEF46AEC96924658F027DA2E0 /* ATSplashScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATSplashScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB675D6C253D503CAE89C128A03389DF /* Pods-ATSplashScreen_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATSplashScreen_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B1267AF2CBB99D3CB01F380B15113B36 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8EEDD5B2040618973F62DC3B1393416 /* ATSplashScreen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ATSplashScreen.modulemap; sourceTree = "<group>"; };
+		B8EEDD5B2040618973F62DC3B1393416 /* ATSplashScreen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ATSplashScreen.modulemap; sourceTree = "<group>"; };
 		C7B294BAD09123F417B7A9ED251CE675 /* Pods-ATSplashScreen_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATSplashScreen_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DB7BB3F00B95198E08D17CCF64DA8294 /* ATSplashScreen-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATSplashScreen-prefix.pch"; sourceTree = "<group>"; };
 		E057E631432309BDD04196E1B0881F4D /* Pods-ATSplashScreen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATSplashScreen_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EB14F2C3D0ECA7A56D585AA2D2329E68 /* Pods-ATSplashScreen_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATSplashScreen_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F0829DD842BFEF0971495F0CCA150F62 /* Pods-ATSplashScreen_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ATSplashScreen_Example.modulemap"; sourceTree = "<group>"; };
+		F0829DD842BFEF0971495F0CCA150F62 /* Pods-ATSplashScreen_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ATSplashScreen_Example.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 		7F138ABA54A115B74B87ECE54832324F /* ATSplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				65D3A1099DE238798CC12CCCF4DF1BC4 /* ReplaceMe.swift */,
+				49B821B420A75F4A006E9A44 /* SplashScreenView.swift */,
 				0A4FC7DD68690B4C80FA1D069EC6EC3F /* Support Files */,
 			);
 			name = ATSplashScreen;
@@ -338,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DFA6BBA7E5B64AE1C1CE3D32B694D0 /* ATSplashScreen-dummy.m in Sources */,
-				8AADFB87E2DB5AD9EF7C2703EE910802 /* ReplaceMe.swift in Sources */,
+				49B821B520A75F4A006E9A44 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
