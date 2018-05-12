@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        view = SplashScreenView(frame: view.frame, imageName: "apple")
     }
 
     override func didReceiveMemoryWarning() {
