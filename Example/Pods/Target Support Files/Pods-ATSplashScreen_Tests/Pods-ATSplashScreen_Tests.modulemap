@@ -1,0 +1,6 @@
+framework module Pods_ATSplashScreen_Tests {
+  umbrella header "Pods-ATSplashScreen_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

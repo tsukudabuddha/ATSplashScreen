@@ -1,0 +1,6 @@
+framework module ATSplashScreen {
+  umbrella header "ATSplashScreen-umbrella.h"
+
+  export *
+  module * { export * }
+}
