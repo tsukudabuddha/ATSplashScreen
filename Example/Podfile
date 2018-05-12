@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ATSplashScreen_Example' do
+  pod 'ATSplashScreen', :path => '../'
+
+  target 'ATSplashScreen_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
