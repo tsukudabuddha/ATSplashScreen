@@ -23,9 +23,7 @@ public class SplashScreenView: UIView {
     private var imageView: UIImageView!
 
     var lineCount: Int!  // Number of lines
-    var lineAnimationDuration: Double!
     
-    var imageName: String!
     var shouldAnimateLogo: Bool!
     var shouldDrawLines: Bool!
     
@@ -98,7 +96,7 @@ public class SplashScreenView: UIView {
             addSubview(lineView)
             sendSubview(toBack: lineView)
             let delay: TimeInterval = 1 + (0.05 * Double(i)) + Double(1 / Double(lineCount))
-            lineAnimationDuration = 0.5
+            let lineAnimationDuration = 0.5
             UIView.animate(withDuration: lineAnimationDuration, delay: delay, options: [], animations: {
                 lineView.backgroundColor = UIColor.white
             }, completion: nil)
