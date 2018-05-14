@@ -8,8 +8,19 @@
 
 import UIKit
 
+/**
+    The different types of transitions
+ 
+     ````
+     case shutter
+     case fadeOnly
+     ````
+*/
 public enum TransitionType {
+    /// Default animation. Lines fade-in in 'shutter' fashion
     case shutter // default
+    
+    /// Only animates logo, nothing else
     case fadeOnly
 }
 
@@ -27,7 +38,7 @@ public class SplashScreenView: UIView {
     var shouldAnimateLogo: Bool!
     var shouldDrawLines: Bool!
     
-    override init(frame: CGRect) {
+    private override init(frame: CGRect) {
         super.init(frame: frame)
 
         shouldAnimateLogo = false
@@ -122,10 +133,12 @@ public class SplashScreenView: UIView {
         }, completion: { (complete) in
             
             // Grow and fade
-            UIView.animate(withDuration: 0.6, delay: 0, options: [], animations: {
-                self.imageView.frame = self.imageView.frame.insetBy(dx: -50, dy: -50)
-                self.imageView.layer.opacity = 0
-            }, completion: nil)
+            UIView.animate(withDuration: 0.8, delay: 0, options: [], animations: {
+                self.imageView.frame = self.imageView.frame.insetBy(dx: -100, dy: -100)
+                self.layer.opacity = 0
+            }, completion: { (bool) in
+                self.removeFromSuperview()
+            })
         })
     }
     
