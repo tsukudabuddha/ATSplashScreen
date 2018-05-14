@@ -24,11 +24,28 @@ public enum TransitionType {
     case fadeOnly
 }
 
+/**
+    Options for the shutter effect lines
+ 
+     ````
+     case vertical
+     case horizontal
+     ````
+*/
 public enum LineOrientation {
+    /// Creates Vertical lines like |||||
     case vertical
+    
+    /// Creates horizontal lines from top to bottom like =
     case horizontal
 }
 
+/**
+    A Subclass of UIView that displays an animated splash screen.
+ 
+    Meant to be used as the first view that appears in your app.
+ 
+ */
 public class SplashScreenView: UIView {
     
     private var imageView: UIImageView!
@@ -45,7 +62,14 @@ public class SplashScreenView: UIView {
         shouldDrawLines = false
     }
     
-    public convenience init(frame: CGRect, logoColor: UIColor, logoSize: CGSize, logoName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
+    /**
+        Initializes and returns a newly allocated splash screen view with the specified parameters
+     
+     - Parameters:
+        - frame: CGRect that dictates the location of the view
+     
+    */
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), logoColor: UIColor, logoSize: CGSize, logoName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
         self.init(frame: frame)
         
         /* Set Default Values for required vars */
@@ -69,12 +93,12 @@ public class SplashScreenView: UIView {
         }
     }
     
-    public convenience init(frame: CGRect, imageName: String) {
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageName: String) {
         self.init(frame: frame, logoColor: UIColor.black, logoSize: CGSize(width: 200, height: 200), logoName: imageName)
         
     }
     
-    public convenience init(frame: CGRect, lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
         self.init(frame: frame)
         self.lineCount = lineCount
         backgroundColor = UIColor.black
