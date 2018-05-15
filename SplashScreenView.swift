@@ -63,13 +63,17 @@ public class SplashScreenView: UIView {
     }
     
     /**
-        Initializes and returns a newly allocated splash screen view with the specified parameters
+        Initializes and returns a newly allocated splash screen view with the specified parameters. Use this initializer to have the most control over your animation.
      
-     - Parameters:
-        - frame: CGRect that dictates the location of the view
-     
+        - Parameter frame: **CGRect** Rect that dictates the location of the view.
+            Defaults to the screen size (whole screen).
+        - Parameter imageColor: **UIColor** Color of the image.
+        - Parameter imageSize: **CGSize** Size of the image.
+        - Parameter imageName: **String** Name of image. Use the filename of asset
+        - Parameter transition: **TransitionType** Type of transition.
+        - Parameter lineOrientation: **LineOrientation** Line Orientation. More info in enum doc
     */
-    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), logoColor: UIColor, logoSize: CGSize, logoName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageColor: UIColor, imageSize: CGSize, imageName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
         self.init(frame: frame)
         
         /* Set Default Values for required vars */
@@ -77,12 +81,13 @@ public class SplashScreenView: UIView {
         shouldAnimateLogo = true
         
 
-        backgroundColor = logoColor
+        backgroundColor = imageColor
         
-        let x = bounds.midX - (0.5 * logoSize.width)
-        let y = bounds.midY - (0.5 * logoSize.height)
-        setImageView(fromName: logoName, withSize: logoSize, withOriginPoint: CGPoint(x: x, y: y))
+        let x = bounds.midX - (0.5 * imageSize.width)
+        let y = bounds.midY - (0.5 * imageSize.height)
+        setImageView(fromName: imageName, withSize: imageSize, withOriginPoint: CGPoint(x: x, y: y))
         addSubview(self.imageView)
+        
         
         switch transition {
         case .fadeOnly:
@@ -93,11 +98,25 @@ public class SplashScreenView: UIView {
         }
     }
     
+    /**
+        Initializes and returns a newly allocated splash screen view with the specified image.
+     
+        - Parameter frame: **CGRect** Rect that dictates the location of the view.
+        Defaults to the screen size (whole screen).
+        - Parameter imageName: **String** Name of image. Use the filename of asset
+     */
     public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageName: String) {
-        self.init(frame: frame, logoColor: UIColor.black, logoSize: CGSize(width: 200, height: 200), logoName: imageName)
+        self.init(frame: frame, imageColor: UIColor.black, imageSize: CGSize(width: 200, height: 200), imageName: imageName)
         
     }
     
+    /**
+     Initializes and returns a newly allocated splash screen view with the specified parameters. Use this initializer to create Splash Screen without logo and only animated lines.
+     
+     - Parameter frame: **CGRect** Rect that dictates the location of the view.
+     Defaults to the screen size (whole screen).
+     - Parameter imageName: **String** Name of image. Use the filename of asset
+     */
     public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
         self.init(frame: frame)
         self.lineCount = lineCount
@@ -105,6 +124,7 @@ public class SplashScreenView: UIView {
         animateLines(lineOrientation: lineOrientation)
     }
     
+    // MARK: Animate Lines
     private func animateLines(lineOrientation: LineOrientation) {
         
         var lineHeight: CGFloat = 0
@@ -142,6 +162,8 @@ public class SplashScreenView: UIView {
         
     }
     
+    
+    // MARK: Animate Logo
     private func animateLogo(lines: Bool = false) {
         /* Make Logo dissappear */
         var logoDelay = TimeInterval(0.5)
@@ -166,6 +188,7 @@ public class SplashScreenView: UIView {
         })
     }
     
+    // MARK: Create Image View and set
     private func setImageView(fromName: String, withSize: CGSize?, withOriginPoint: CGPoint?) {
         let imageView = UIImageView(image: UIImage(named: fromName))
         var size = CGSize(width: 200, height: 200)
