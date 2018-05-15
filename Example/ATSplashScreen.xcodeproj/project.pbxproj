@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10C5EF5FC928AB67091C73D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		10C5EF5FC928AB67091C73D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2E7DC13513E54E05E7CCAC92 /* Pods_ATSplashScreen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATSplashScreen_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389F140E06A2888CBC7C8B57 /* Pods_ATSplashScreen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATSplashScreen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7BF1196DEF7BE03CDD7012 /* Pods-ATSplashScreen_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATSplashScreen_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATSplashScreen_Example/Pods-ATSplashScreen_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		863F178B7F58C84BAC002F26 /* Pods-ATSplashScreen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATSplashScreen_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATSplashScreen_Example/Pods-ATSplashScreen_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CF70BBE4038517738E6BA6FC /* Pods-ATSplashScreen_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATSplashScreen_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATSplashScreen_Tests/Pods-ATSplashScreen_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		CF81BE9ABAB861EFEDE8FD93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		D1635CE4C36E53057C87053B /* ATSplashScreen.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ATSplashScreen.podspec; path = ../ATSplashScreen.podspec; sourceTree = "<group>"; };
+		CF81BE9ABAB861EFEDE8FD93 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D1635CE4C36E53057C87053B /* ATSplashScreen.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ATSplashScreen.podspec; path = ../ATSplashScreen.podspec; sourceTree = "<group>"; };
 		DA4A2AB635F32A173A77D055 /* Pods-ATSplashScreen_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATSplashScreen_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATSplashScreen_Tests/Pods-ATSplashScreen_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -15,7 +15,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view = SplashScreenView(frame: view.frame, imageName: "apple")
+        // This is meant to represent the first view in your app
+        let mainView = UITableView(frame: view.frame)
+        mainView.backgroundColor = UIColor.darkGray
+        view.addSubview(mainView)
+        
+        // Most Verbose Initializer
+        let verboseView = SplashScreenView(imageColor: .black, imageSize: CGSize(width: 200, height: 200), imageName: "apple", transition: .shutter, lineOrientation: .horizontal)
+        
+        // Most Simple
+        let _ = SplashScreenView(imageName: "apple")
+
+        view.addSubview(verboseView)
     }
 
     override func didReceiveMemoryWarning() {
