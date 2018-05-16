@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'ATSplashScreen/Classes/'
+  s.source_files = 'ATSplashScreen/Classes/*'
   
   # s.resource_bundles = {
   #   'ATSplashScreen' => ['ATSplashScreen/Assets/*.png']
