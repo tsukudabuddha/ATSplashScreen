@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ATSplashScreen'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ATSplashScreen.'
+  s.summary          = 'This is a library to easily create a splash screen. Can build twitter like splash screen in one line.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    This library is designed to make creating a nice splash screen simple. It includes a simple logo shrink and grow/fade option as well as a 'shutter' effect that can be used in conjunction with the logo animation.
                        DESC
 
   s.homepage         = 'https://github.com/tsukudabuddha/ATSplashScreen'
@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/tsukudabuddha/ATSplashScreen.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'ATSplashScreen/Classes/**/*'
+  s.source_files = 'ATSplashScreen/Classes/'
   
   # s.resource_bundles = {
   #   'ATSplashScreen' => ['ATSplashScreen/Assets/*.png']

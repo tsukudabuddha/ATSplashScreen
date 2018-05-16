@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49B821B520A75F4A006E9A44 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B821B420A75F4A006E9A44 /* SplashScreenView.swift */; };
+		49B821BB20ABA23B006E9A44 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B821BA20ABA23B006E9A44 /* SplashScreenView.swift */; };
 		4D10B0A0EC59BC2B5F43810823CF1738 /* Pods-ATSplashScreen_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42ECFAC161BF272AB5D6DDEC64C78B88 /* Pods-ATSplashScreen_Tests-dummy.m */; };
 		57EE661EB892BB725BEDD86F821FA533 /* ATSplashScreen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58378D7DEB237D03F2998B0CF2627313 /* ATSplashScreen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A1EB4C7EB7C71B5F7A187562491A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -40,7 +40,7 @@
 		42ECFAC161BF272AB5D6DDEC64C78B88 /* Pods-ATSplashScreen_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATSplashScreen_Tests-dummy.m"; sourceTree = "<group>"; };
 		460D094DDFD59A80F5A4A44E12FDCCA9 /* Pods-ATSplashScreen_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATSplashScreen_Tests-resources.sh"; sourceTree = "<group>"; };
 		47E99FFBC20F7F51D917480A1AACBC29 /* Pods-ATSplashScreen_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATSplashScreen_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		49B821B420A75F4A006E9A44 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		49B821BA20ABA23B006E9A44 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreenView.swift; path = ATSplashScreen/Classes/SplashScreenView.swift; sourceTree = "<group>"; };
 		4B794DFDCAD1FEAFDB57DEE61863E4F5 /* Pods-ATSplashScreen_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATSplashScreen_Tests-umbrella.h"; sourceTree = "<group>"; };
 		4F2785A08D87BDF941518DB257A0354B /* Pods_ATSplashScreen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATSplashScreen_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56872DBCC0FCD3D7B38EAF75F16A1CD1 /* Pods-ATSplashScreen_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATSplashScreen_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		7F138ABA54A115B74B87ECE54832324F /* ATSplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				49B821B420A75F4A006E9A44 /* SplashScreenView.swift */,
+				49B821BA20ABA23B006E9A44 /* SplashScreenView.swift */,
 				0A4FC7DD68690B4C80FA1D069EC6EC3F /* Support Files */,
 			);
 			name = ATSplashScreen;
@@ -296,6 +296,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					5D4C02F057133DF78BA44E9492742F7F = {
+						LastSwiftMigration = 0930;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -338,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DFA6BBA7E5B64AE1C1CE3D32B694D0 /* ATSplashScreen-dummy.m in Sources */,
-				49B821B520A75F4A006E9A44 /* SplashScreenView.swift in Sources */,
+				49B821BB20ABA23B006E9A44 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21B35F5A2212A39D42E4042DBFCFC4E1 /* ATSplashScreen.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -538,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21B35F5A2212A39D42E4042DBFCFC4E1 /* ATSplashScreen.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
