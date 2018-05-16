@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ATSplashScreen'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'This is a library to easily create a splash screen. Can build twitter like splash screen in one line.'
 
 # This description is used to generate tags and improve search results.
