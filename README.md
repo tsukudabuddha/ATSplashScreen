@@ -10,7 +10,8 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-This is what you'll see when you run the project-
+You should see this
+
 ![Demo Gif](splashScreenGif1.gif)
 
 ## Usage
@@ -27,7 +28,7 @@ There are also more verbose initializers, for example:
 ```Swift
 let splashScreen = SplashScreenView(imageColor: .black, imageSize: CGSize(width: 200, height: 200), imageName: "apple", transition: .shutter, lineOrientation: .horizontal)
 ```
-Which produces the splash screen shown in the gif under the example header
+Which was used to create the splash screen in the example app (gif above)
 
 ## Installation
 
