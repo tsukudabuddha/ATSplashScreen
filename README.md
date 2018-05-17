@@ -13,7 +13,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 This is what you'll see when you run the project-
 ![Demo Gif](splashScreenGif1.gif)
 
-## Requirements
+## Usage
+Add a Splash Screen View as a subview of the view you want to load
+
+This code would go in your first view controller's viewDidLoad() func
+```swift
+let splashScreen = SplashScreenView(imageName: "apple")
+
+view.addSubView(splashScreen)
+```
+
+There are also more verbose initializers, for example:
+```Swift
+let splashScreen = SplashScreenView(imageColor: .black, imageSize: CGSize(width: 200, height: 200), imageName: "apple", transition: .shutter, lineOrientation: .horizontal)
+```
+Which produces the splash screen shown in the gif under the example header
 
 ## Installation
 
