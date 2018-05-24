@@ -152,6 +152,7 @@ public class SplashScreenView: UIView {
             let lineView = UIView(frame: lineFrame)
             lineView.backgroundColor = UIColor.clear
             addSubview(lineView)
+            sendSubview(toBack: lineView)
             
             let delay: TimeInterval = 1 + (0.05 * Double(i)) + Double(1 / Double(lineCount))
             let lineAnimationDuration = 0.5
