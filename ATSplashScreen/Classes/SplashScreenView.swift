@@ -73,7 +73,7 @@ public class SplashScreenView: UIView {
         - Parameter transition: **TransitionType** Type of transition.
         - Parameter lineOrientation: **LineOrientation** Line Orientation. More info in enum doc
     */
-    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageColor: UIColor, imageSize: CGSize, imageName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal) {
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageColor: UIColor, imageSize: CGSize, imageName: String, transition: TransitionType = .fadeOnly, lineOrientation: LineOrientation = .horizontal, lineColor: UIColor = .white) {
         self.init(frame: frame)
         
         /* Set Default Values for required vars */
@@ -94,7 +94,7 @@ public class SplashScreenView: UIView {
             backgroundColor = UIColor.white
             animateLogo()
         case .shutter :
-            animateLines(lineOrientation: lineOrientation)
+            animateLines(lineOrientation: lineOrientation, lineColor: lineColor)
         }
     }
     
@@ -155,19 +155,31 @@ public class SplashScreenView: UIView {
             
             let delay: TimeInterval = 1 + (0.05 * Double(i)) + Double(1 / Double(lineCount))
             let lineAnimationDuration = 0.5
-            UIView.animate(withDuration: lineAnimationDuration, delay: delay, options: [], animations: {
-                lineView.backgroundColor = lineColor
-            }, completion: nil)
-            
-            
-            if i == (lineCount - 1) && shouldAnimateLogo {
-                animateLogo(lines: true)
+            if i == (lineCount - 1){
+                UIView.animate(withDuration: lineAnimationDuration, delay: delay, options: [], animations: {
+                    lineView.backgroundColor = lineColor
+                    
+                }, completion: { (bool) in
+                    // Fade Out View
+                    UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+                        self.layer.opacity = 0
+                    }, completion: { (bool) in
+                        if self.shouldAnimateLogo {
+                            self.animateLogo(lines: true)
+                        } else {
+                            self.removeFromSuperview()
+                        }
+                    })
+                })
+            } else {
+                UIView.animate(withDuration: lineAnimationDuration, delay: delay, options: [], animations: {
+                    lineView.backgroundColor = lineColor
+                    
+                }, completion: nil)
             }
+            
         }
-        
-        
     }
-    
     
     // MARK: Animate Logo
     private func animateLogo(lines: Bool = false) {
