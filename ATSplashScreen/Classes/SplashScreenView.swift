@@ -52,14 +52,14 @@ public class SplashScreenView: UIView {
 
     var lineCount: Int!  // Number of lines
     
-    var shouldAnimateLogo: Bool!
-    var shouldDrawLines: Bool!
+    private var shouldAnimateLogo: Bool!
+    private var shouldDrawLines: Bool!
     
     private override init(frame: CGRect) {
         super.init(frame: frame)
 
-        shouldAnimateLogo = false
         shouldDrawLines = false
+        shouldAnimateLogo = false
     }
     
     /**
@@ -107,7 +107,6 @@ public class SplashScreenView: UIView {
      */
     public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), imageName: String) {
         self.init(frame: frame, imageColor: UIColor.black, imageSize: CGSize(width: 200, height: 200), imageName: imageName)
-        
     }
     
     /**
@@ -115,17 +114,20 @@ public class SplashScreenView: UIView {
      
      - Parameter frame: **CGRect** Rect that dictates the location of the view.
      Defaults to the screen size (whole screen).
-     - Parameter imageName: **String** Name of image. Use the filename of asset
+     - Parameter lineOrientation: **LineOrientation**
+     - Parameter lineCount: **Int** Number of lines to be produced (default is 10)
+     - Parameter lineColor: **UIColor** Color of the incoming lines (default is white)
+     - Parameter backgroundColor: **UIColor** Color of the background (default is black)
      */
-    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10) {
+    public convenience init(frame: CGRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), lineOrientation: LineOrientation = .horizontal, lineCount: Int = 10, lineColor: UIColor = .white, backgroundColor: UIColor = .black) {
         self.init(frame: frame)
         self.lineCount = lineCount
-        backgroundColor = UIColor.black
-        animateLines(lineOrientation: lineOrientation)
+        self.backgroundColor = backgroundColor
+        animateLines(lineOrientation: lineOrientation, lineColor: lineColor)
     }
     
     // MARK: Animate Lines
-    private func animateLines(lineOrientation: LineOrientation) {
+    private func animateLines(lineOrientation: LineOrientation, lineColor: UIColor = UIColor.white) {
         
         var lineHeight: CGFloat = 0
         var lineWidth: CGFloat = 0
@@ -146,19 +148,23 @@ public class SplashScreenView: UIView {
             } else {
                 lineFrame = CGRect(x: (self.bounds.minX + (CGFloat(i) * lineWidth)), y: 0, width: lineWidth, height: lineHeight)
             }
+            
             let lineView = UIView(frame: lineFrame)
             lineView.backgroundColor = UIColor.clear
             addSubview(lineView)
-            sendSubview(toBack: lineView)
+            
             let delay: TimeInterval = 1 + (0.05 * Double(i)) + Double(1 / Double(lineCount))
             let lineAnimationDuration = 0.5
             UIView.animate(withDuration: lineAnimationDuration, delay: delay, options: [], animations: {
-                lineView.backgroundColor = UIColor.white
+                lineView.backgroundColor = lineColor
             }, completion: nil)
+            
+            
             if i == (lineCount - 1) && shouldAnimateLogo {
                 animateLogo(lines: true)
             }
         }
+        
         
     }
     
